@@ -67,7 +67,7 @@ for i, row in pinc.iterrows():
 
 print(pinc)
 
-l=['08/01/2020']
+l=['03/01/2021']
 
 for test in l:
     #test = '04/01/2020'
@@ -75,13 +75,16 @@ for test in l:
     resid = (pinc.loc[test].to_numpy()[:49] - pred)
     print(resid)
 
-    fig = px.scatter(x=density, y=resid, text=states, title=test+' pop. density to COVID cases (residuals)',
+    fig = px.scatter(x=density, y=resid, title=test+' pop. density to COVID cases (residuals)',
                      labels={
                          'title':test+' pop. density to COVID cases (residuals)',
                          'x':'Population density',
                          'y':'Residual'
                      })
     fig.update_traces(textposition='top right')
+    fig.update_traces(marker_color = '#000', marker_size=18)
+    fig.update_layout(title_font=dict(size=36, color="#000"), font=dict(size=42, color="#000"))
+    #fig.update_layout(plot_bgcolor="#fff")
 
     fig.show()
 print('here')

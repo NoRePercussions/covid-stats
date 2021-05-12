@@ -58,7 +58,8 @@ fig = px.scatter(x=[get_date(int(a+18523)) for a in x],  y=np.log(y)- ( x*coef[0
                      'x': 'Date',
                      'y': 'Residual'
                  })#)
-fig.update_layout(font=dict(size=36))
+fig.update_traces(marker_color = '#000', marker_size=18)
+fig.update_layout(font=dict(size=48, color="#000"))
 
 fig.show()
 

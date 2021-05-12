@@ -101,7 +101,8 @@ fig = px.scatter(days, x='date', y='rnought1', title="R0 estimate over time (Met
                      'date':'Date',
                      'rnought1': 'R0'
                  })
-fig.update_layout(font=dict(size=30))
+fig.update_layout(font=dict(size=48, color="#000"))
+fig.update_traces(marker_color = '#000', marker_size=18)
 
 fig.show()
 
@@ -110,7 +111,8 @@ fig = px.scatter(days, x='date', y='rnought2', title="R0 estimate over time (Met
                      'date':'Date',
                      'rnought2': 'R0'
                  })
-fig.update_layout(font=dict(size=30))
+fig.update_layout(font=dict(size=48, color="#000"))
+fig.update_traces(marker_color = '#000', marker_size=18)
 fig.show()
 
 fig = px.scatter(days, x='date', y='rnought3', title="R0 estimate over time (Method 3)",
@@ -118,7 +120,8 @@ fig = px.scatter(days, x='date', y='rnought3', title="R0 estimate over time (Met
                      'date':'Date',
                      'rnought3': 'R0'
                  })
-fig.update_layout(font=dict(size=30))
+fig.update_layout(font=dict(size=48, color="#000"))
+fig.update_traces(marker_color = '#000', marker_size=18)
 fig.show()
 
 
